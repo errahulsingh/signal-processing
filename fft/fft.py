@@ -11,7 +11,7 @@ signal = np.sin((freq1 * 2 * np.pi) * t) + np.sin((freq2 * 2 * np.pi) * t) + np.
 
 #signal = ([1] * 8 + [0] * 8) * 64      # rectangular pulse
 
-sample_rate = t.__len__()/t[-1]     # calculated sample rate
+sample_rate = N/t[-1]     # calculated sample rate
 
 f = sample_rate * np.arange(int(N/2)) / N   # frequency vector
 fourier = np.fft.fft(signal)
